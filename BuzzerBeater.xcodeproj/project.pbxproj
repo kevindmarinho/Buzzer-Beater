@@ -8,17 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		288EBC7C2991BA2E00A838B9 /* BuzzerBeaterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288EBC7B2991BA2E00A838B9 /* BuzzerBeaterApp.swift */; };
-		288EBC7E2991BA2E00A838B9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288EBC7D2991BA2E00A838B9 /* ContentView.swift */; };
+		288EBC7E2991BA2E00A838B9 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288EBC7D2991BA2E00A838B9 /* GameView.swift */; };
 		288EBC802991BA2F00A838B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 288EBC7F2991BA2F00A838B9 /* Assets.xcassets */; };
 		288EBC832991BA2F00A838B9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 288EBC822991BA2F00A838B9 /* Preview Assets.xcassets */; };
+		28DF92A9299EF49A00DC34F1 /* FocusEntity in Frameworks */ = {isa = PBXBuildFile; productRef = 28DF92A8299EF49A00DC34F1 /* FocusEntity */; };
+		72AC0ACE299F12CB00B5EF82 /* BasketballHoop.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 72AC0ACD299F12CB00B5EF82 /* BasketballHoop.usdz */; };
+		72E5AF70299F0EFC0045248B /* ARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E5AF6F299F0EFC0045248B /* ARView.swift */; };
+		72E5AF72299F10160045248B /* ARViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E5AF71299F10160045248B /* ARViewCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		288EBC782991BA2E00A838B9 /* BuzzerBeater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuzzerBeater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		288EBC7B2991BA2E00A838B9 /* BuzzerBeaterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuzzerBeaterApp.swift; sourceTree = "<group>"; };
-		288EBC7D2991BA2E00A838B9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		288EBC7D2991BA2E00A838B9 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		288EBC7F2991BA2F00A838B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		288EBC822991BA2F00A838B9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		72AC0ACD299F12CB00B5EF82 /* BasketballHoop.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = BasketballHoop.usdz; sourceTree = "<group>"; };
+		72E5AF6F299F0EFC0045248B /* ARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARView.swift; sourceTree = "<group>"; };
+		72E5AF71299F10160045248B /* ARViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28DF92A9299EF49A00DC34F1 /* FocusEntity in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +59,9 @@
 		288EBC7A2991BA2E00A838B9 /* BuzzerBeater */ = {
 			isa = PBXGroup;
 			children = (
+				72E5AF6C299F0E760045248B /* Scenes */,
+				72E5AF6A299F0E630045248B /* Resources */,
 				288EBC7B2991BA2E00A838B9 /* BuzzerBeaterApp.swift */,
-				288EBC7D2991BA2E00A838B9 /* ContentView.swift */,
 				288EBC7F2991BA2F00A838B9 /* Assets.xcassets */,
 				288EBC812991BA2F00A838B9 /* Preview Content */,
 			);
@@ -65,6 +74,48 @@
 				288EBC822991BA2F00A838B9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		72E5AF6A299F0E630045248B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				72E5AF6B299F0E6A0045248B /* 3DModels */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		72E5AF6B299F0E6A0045248B /* 3DModels */ = {
+			isa = PBXGroup;
+			children = (
+				72AC0ACD299F12CB00B5EF82 /* BasketballHoop.usdz */,
+			);
+			path = 3DModels;
+			sourceTree = "<group>";
+		};
+		72E5AF6C299F0E760045248B /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				72E5AF6D299F0E970045248B /* GameView */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		72E5AF6D299F0E970045248B /* GameView */ = {
+			isa = PBXGroup;
+			children = (
+				72E5AF6E299F0ED30045248B /* Components */,
+				288EBC7D2991BA2E00A838B9 /* GameView.swift */,
+			);
+			path = GameView;
+			sourceTree = "<group>";
+		};
+		72E5AF6E299F0ED30045248B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				72E5AF6F299F0EFC0045248B /* ARView.swift */,
+				72E5AF71299F10160045248B /* ARViewCoordinator.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +134,9 @@
 			dependencies = (
 			);
 			name = BuzzerBeater;
+			packageProductDependencies = (
+				28DF92A8299EF49A00DC34F1 /* FocusEntity */,
+			);
 			productName = BuzzerBeater;
 			productReference = 288EBC782991BA2E00A838B9 /* BuzzerBeater.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +165,9 @@
 				Base,
 			);
 			mainGroup = 288EBC6F2991BA2E00A838B9;
+			packageReferences = (
+				28DF92A7299EF49A00DC34F1 /* XCRemoteSwiftPackageReference "FocusEntity" */,
+			);
 			productRefGroup = 288EBC792991BA2E00A838B9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +184,7 @@
 			files = (
 				288EBC832991BA2F00A838B9 /* Preview Assets.xcassets in Resources */,
 				288EBC802991BA2F00A838B9 /* Assets.xcassets in Resources */,
+				72AC0ACE299F12CB00B5EF82 /* BasketballHoop.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +195,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				288EBC7E2991BA2E00A838B9 /* ContentView.swift in Sources */,
+				72E5AF72299F10160045248B /* ARViewCoordinator.swift in Sources */,
+				288EBC7E2991BA2E00A838B9 /* GameView.swift in Sources */,
 				288EBC7C2991BA2E00A838B9 /* BuzzerBeaterApp.swift in Sources */,
+				72E5AF70299F0EFC0045248B /* ARView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,9 +327,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BuzzerBeater/Preview Content\"";
-				DEVELOPMENT_TEAM = XJ57BXJG95;
+				DEVELOPMENT_TEAM = TSL9RRYSR6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Augmented Reality Purposes";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -296,9 +357,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BuzzerBeater/Preview Content\"";
-				DEVELOPMENT_TEAM = XJ57BXJG95;
+				DEVELOPMENT_TEAM = TSL9RRYSR6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Augmented Reality Purposes";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -339,6 +401,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		28DF92A7299EF49A00DC34F1 /* XCRemoteSwiftPackageReference "FocusEntity" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maxxfrazer/FocusEntity";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		28DF92A8299EF49A00DC34F1 /* FocusEntity */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 28DF92A7299EF49A00DC34F1 /* XCRemoteSwiftPackageReference "FocusEntity" */;
+			productName = FocusEntity;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 288EBC702991BA2E00A838B9 /* Project object */;
 }
